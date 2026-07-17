@@ -1,7 +1,7 @@
 # 🚀 DevOps Technical Assessment - TechAssTask
 
-[![Deployment Status](https://img.shields.io/badge/Deployment-Active-brightgreen)](https://github.com/your-username/TechAssTask)
-[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue)](https://github.com/your-username/TechAssTask/actions)
+[![Deployment Status](https://img.shields.io/badge/Deployment-Active-brightgreen)](https://github.com/kupiMZS/TechAssTask)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue)](https://github.com/kupiMZS/TechAssTask/actions)
 [![Docker](https://img.shields.io/badge/Docker-Containerized-blue)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
@@ -62,7 +62,7 @@ The solution demonstrates:
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                           GitHub Repository                                │
-│                        (https://github.com/your-username/TechAssTask)      │
+│                        (https://github.com/kupiMZS/TechAssTask)      │
 │                                                                             │
 │  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────────────┐  │
 │  │ site1/  │  │ site2/  │  │ nginx/  │  │ scripts/│  │ .github/        │  │
@@ -454,7 +454,7 @@ git --version
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/TechAssTask.git
+git clone https://github.com/kupiMZS/TechAssTask.git
 cd TechAssTask
 ```
 
@@ -952,6 +952,50 @@ docker-compose logs --tail=50 | grep -i error
 | **Docker Compose not found** | Install Docker Compose: `sudo apt install docker-compose` |
 | **SSL certificate expired** | Renew: `./scripts/ssl-renew.sh` |
 
+## 🤔 Assumptions & Design Decisions
+
+### Assumptions
+
+1. **Server Environment**
+   - The server runs Ubuntu 20.04 LTS or higher
+   - Docker and Docker Compose are pre-installed
+   - SSH key authentication is configured for password-less access
+   - Port 80 is open and accessible
+
+2. **Deployment Path**
+   - The project is deployed to `~/TechAssTask` on the server
+   - The user has write permissions in the home directory
+
+3. **GitHub Actions**
+   - The repository is configured with the required secrets
+   - The runner has internet access to pull Docker images
+
+4. **Networking**
+   - The server can be reached via SSH on the default port (22)
+   - No firewall restrictions on port 80
+
+### Design Decisions
+
+1. **Why Nginx Alpine?**
+   - Minimal footprint (~5MB)
+   - Fast and reliable reverse proxy
+   - Built-in health check support
+
+2. **Why Docker Compose?**
+   - Simple multi-container management
+   - Single command to start/stop all services
+   - Easy to replicate across environments
+
+3. **Why Static Sites?**
+   - Simple to containerize and deploy
+   - No database or backend required
+   - Perfect for learning DevOps principles
+
+4. **Why GitHub Actions?**
+   - Native CI/CD integration with GitHub
+   - Free for public repositories
+   - Easy to configure with YAML
+
 ### Debugging Commands
 
 ```bash
@@ -1010,7 +1054,7 @@ Dear Hiring Team,
 
 Please find my submission for the DevOps Technical Assessment.
 
-📎 GitHub Repository: https://github.com/your-username/TechAssTask
+📎 GitHub Repository: https://github.com/kupiMZS/TechAssTask
 
 📋 Solution Overview:
 • Two static websites (Company Landing Page & Portfolio)

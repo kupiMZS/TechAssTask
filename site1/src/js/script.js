@@ -96,3 +96,4 @@ console.log('%c🚀 Red Lime Solutions', 'font-size: 24px; font-weight: bold; co
 console.log('%cDevOps & Cloud Automation', 'font-size: 16px; color: #FF6584;');
 console.log('%c🔧 Built with ❤️ and Docker', 'font-size: 14px; color: #333;');
 console.log('%c📧 career@redlimesolutions.com', 'font-size: 14px; color: #6C63FF;');
+
