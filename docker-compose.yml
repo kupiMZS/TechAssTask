@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # Nginx Reverse Proxy
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    depends_on:
+      - site1
+      - site2
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  # Site 1 - Company Landing Page
+  site1:
+    build:
+      context: ./site1
+      dockerfile: Dockerfile
+    container_name: site1
+    expose:
+      - "80"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  # Site 2 - Portfolio Page
+  site2:
+    build:
+      context: ./site2
+      dockerfile: Dockerfile
+    container_name: site2
+    expose:
+      - "80"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
