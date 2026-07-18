@@ -1,4 +1,3 @@
-# Use lightweight web server
 FROM nginx:alpine
 
 # Copy website files
