@@ -859,7 +859,10 @@ make clean
 
 ## 🔐 Environment Variables
 
-### .env.example
+The project supports environment variables for configuration. A template is provided in `.env.example`. Copy it to `.env` and customize as needed:
+
+```bash
+cp .env.example .env
 
 ```env
 # Server Configuration
